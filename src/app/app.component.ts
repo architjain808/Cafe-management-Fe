@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MenuItem } from 'primeng/api';
 
 @Component({
   selector: 'app-root',
@@ -7,21 +8,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AppComponent implements OnInit {
   resCode!: any;
+  items: MenuItem[] | undefined
   ngOnInit(): void {
-    fetch('https://cafe-management-be-brrg.onrender.com/')
-    .then(response => {
-      if (response.ok) {
-        return response.text(); // Convert response body to text
-      }
-      throw new Error('Network response was not ok');
-    })
-    .then(data => {
-      this.resCode = data
-      console.log(data); // This is your expected string
-    })
-    .catch(error => {
-      console.error('There was a problem with the fetch operation:', error);
-    });
+
+    this.items = [
+      { label: 'Home', icon: 'pi pi-fw pi-home' },
+      { label: 'Calendar', icon: 'pi pi-fw pi-calendar' },
+      { label: 'Edit', icon: 'pi pi-fw pi-pencil' },
+      { label: 'Documentation', icon: 'pi pi-fw pi-file' },
+      { label: 'Settings', icon: 'pi pi-fw pi-cog' }
+  ];
   }
   title = 'cafe-management-fe';
 }
