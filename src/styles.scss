@@ -1,3 +1,57 @@
 @import "primeng/resources/themes/lara-light-blue/theme.css";
 @import "primeng/resources/primeng.css";
 @import "primeicons/primeicons.css";
+@import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
+@import "./variables.scss";
+@import "./mixin.scss";
+
+//font-size
+.f- {
+  &12 {
+    font-size: 12px;
+  }
+  &14 {
+    font-size: 14px;
+  }
+  &16 {
+    font-size: 16px;
+  }
+  &18 {
+    font-size: 18px;
+  }
+  &20 {
+    font-size: 20px;
+  }
+  &24 {
+    font-size: 24px;
+  }
+  &28 {
+    font-size: 28px;
+  }
+  &32 {
+    font-size: 32px;
+  }
+}
+//font-weight
+.fw- {
+  &500 {
+    font-weight: 500;
+  }
+  &600 {
+    font-weight: 500;
+  }
+}
+
+.container {
+  padding: 20px;
+  width: 100%;
+}
+
+.primary-heading {
+  color: $primary_red;
+  border-left: 2px solid $primary_red;
+}
+
+.heading-secondary {
+  color: $gray_400;
+}

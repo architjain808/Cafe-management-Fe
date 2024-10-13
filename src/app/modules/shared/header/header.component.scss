@@ -1,0 +1,22 @@
+@import "../../../../mixin.scss";
+@import "../../../../variables.scss";
+
+.header-container {
+  width: 100%;
+  padding: 12px 0px;
+  border-radius: 16px;
+  font-weight: 600;
+  @include box-shadow;
+  .logo {
+    align-items: center;
+    font-size: 20px;
+  }
+  .header-element {
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    .element {
+      cursor: pointer;
+    }
+  }
+}
